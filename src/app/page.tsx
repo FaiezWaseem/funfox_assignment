@@ -11,7 +11,7 @@ export default function Home() {
   const [, , isMobile, isTablet] = useDimesions();
 
   return (
-    <Container>
+    <Container showHelpBook={false} >
       <Center pos={'relative'} height={'100%'} flexDir={'column'} zIndex={2} >
         <Stack width={'85%'} minH={'70vh'} bg={'app.bglightGray'} rounded={8} >
           <Center>
@@ -52,7 +52,7 @@ export default function Home() {
             <Cloud label="RESOLUTION" />
           </HStack>
           <Stack justify={'center'} p={10} >
-            <Text  fontSize={useBreakpoint({ base : 14 , md : 16 , lg : 18 , xl : 24})} lineHeight={1.1} >
+            <Text fontSize={useBreakpoint({ base: 14, md: 16, lg: 18, xl: 24 })} lineHeight={1.1} >
               {`You must be familiar with some of these. If not, do not worry! we will cover all these elements as we go along.`}
             </Text>
           </Stack>
@@ -74,14 +74,18 @@ export default function Home() {
                 backgroundRepeat={'no-repeat'}
                 paddingLeft={'4%'}
               >
-                <Text  fontSize={useBreakpoint({ base : 14 , md : 16 , lg : 18 , xl : 26})} width={isTablet ? '90%' : (isMobile ? '100%' : '80%')} >
+                <Text fontSize={useBreakpoint({ base: 14, md: 16, lg: 18, xl: 26 })} width={isTablet ? '90%' : (isMobile ? '100%' : '80%')} >
                   {`For today’s lesson, we will try to understand and practice writing the setting for our stories. The setting is an important element of every fiction story.`}
                 </Text>
               </Stack>
             </Stack>
           </Center>
         </Stack>
-        <Pagination />
+        <Pagination
+          page={1}
+          next="/2"
+          prev="/"
+        />
       </Center>
     </Container>
   );
