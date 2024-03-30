@@ -6,8 +6,8 @@ import Image from "next/image";
 import Pagination from "@/components/Pagination";
 import { useDimesions, useBreakpoint } from "@/hook/useDimensions";
 
-export default function Home() {
 
+export default function Home() {
   const [, , isMobile, isTablet] = useDimesions();
 
   return (

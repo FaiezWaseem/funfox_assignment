@@ -14,3 +14,25 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
+
+.customOverlay {
+  background: rgba(108, 93, 74, 0.7) !important;
+}
+
+.customModal {
+
+  color: #fff;
+  width: 100vw;
+  max-width: 100%;
+  border: 2px solid #fff;
+  border-radius: 8px;
+
+
+  background: rgba(17, 17, 17, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
