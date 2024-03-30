@@ -11,7 +11,8 @@ const theme = {
       700: '#2a69ac',
     },
     app : {
-      bgPink : '#F8D1E0'
+      bgPink : '#F8D1E0',
+      bglightGray : '#F7F9FE'
     }
   },
 }
