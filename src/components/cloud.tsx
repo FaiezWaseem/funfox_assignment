@@ -17,6 +17,6 @@ export default function Cloud( { label } : CloudProps) {
         justify={'center'}
         align={'center'}
     >
-        <Text>{label}</Text>
+        <Text textAlign={'center'} width={'80%'} wordBreak={'break-word'}>{label}</Text>
     </Stack>
 }

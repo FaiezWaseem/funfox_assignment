@@ -20,7 +20,7 @@ export default function Container({ children, showHelpBook }: ContainerProps) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [, , isMobile, isTablet] = useDimesions();
 
-    const sideImagesWidth = useBreakpoint({ base: 80, md: 50, lg: 60, xl: 100 });
+    const sideImagesWidth = useBreakpoint({ base: 60, md: 50, lg: 60, xl: 100 });
 
 
     return <Stack
@@ -99,6 +99,7 @@ export default function Container({ children, showHelpBook }: ContainerProps) {
                             }} 
                             value={'> Setting is the time and place of a story.'}
                             color={'#000'}
+                            isDisabled
                             />
                         </Stack>
                         <HStack>

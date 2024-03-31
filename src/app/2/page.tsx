@@ -1,6 +1,6 @@
 'use client';
 import Container from "@/components/Container";
-import { Stack, Center, HStack, Text, Input , Image } from "@chakra-ui/react";
+import { Stack, Center, HStack, Text, Input, Image } from "@chakra-ui/react";
 import Pagination from "@/components/Pagination";
 
 import { useBreakpoint, useDimesions } from "@/hook/useDimensions";
@@ -10,7 +10,7 @@ export default function PageTwo() {
   return (
     <Container showHelpBook >
       <Center pos={'relative'} height={'100%'} flexDir={'column'} zIndex={2} >
-        <Stack width={'85%'} height={'auto'} bg={'app.bglightGray'} rounded={8} >
+        <Stack width={'85%'} height={'auto'}  bg={'app.bglightGray'} rounded={8}  padding={8} >
           <Stack p={3} m={8} >
             <Text fontSize={useBreakpoint({ base: 16, md: 17, lg: 22, xl: 44 })} fontWeight={500} >Can you figure out the definition of setting from the following examples?</Text>
             <Text fontSize={useBreakpoint({ base: 16, md: 17, lg: 22, xl: 44 })} fontWeight={'lighter'} color={'GrayText'}  >(take a minute to think about this)</Text>
@@ -54,9 +54,9 @@ of other places.`}</Text>
           </Stack>
         </Stack>
         <Pagination
-         page={2}
-         prev="/"
-         next="/2"
+          page={2}
+          prev="/"
+          next="/2"
         />
       </Center>
     </Container>
@@ -70,6 +70,7 @@ interface CardProps {
 }
 
 const Card = ({ src, alt, text }: CardProps) => {
+  const widthAndHeight = useBreakpoint({ base: 100, md: 100, lg: 150, xl: 300 });
   return <Stack justify={'center'} align={'center'} >
     <Stack
       padding={12}
@@ -80,10 +81,10 @@ const Card = ({ src, alt, text }: CardProps) => {
       alignItems={'center'}
       width={'fit-content'}
     >
-      <Image src={src} 
-      width={useBreakpoint({ base: 100, md: 100, lg: 100, xl: 300 })} 
-      height={useBreakpoint({ base: 100, md: 100, lg: 100, xl: 300 })} 
-      alt={alt} />
+      <Image src={src}
+        width={widthAndHeight}
+        height={widthAndHeight}
+        alt={alt} />
     </Stack>
     <Text>{text}</Text>
   </Stack>

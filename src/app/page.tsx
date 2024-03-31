@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Container showHelpBook={false} >
       <Center pos={'relative'} height={'100%'} flexDir={'column'} zIndex={2} >
-        <Stack width={'85%'} minH={'70vh'} bg={'app.bglightGray'} rounded={8} >
+        <Stack width={'85%'}  height={'auto'} bg={'app.bglightGray'} rounded={8} padding={8} >
           <Center>
             <HStack bg={'#FE6784'} justify={'center'} border={'3px dashed #FFAEBE'} py={5}
               px={10} my={5} rounded={10} width={{
