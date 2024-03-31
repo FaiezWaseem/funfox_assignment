@@ -7,10 +7,13 @@ import { useBreakpoint, useDimesions } from "@/hook/useDimensions";
 
 
 export default function PageTwo() {
+
+  const ContainerWidth = useBreakpoint({ base: 0.80, md: 0.90, lg: 0.85, xl: 0.75 });
+
   return (
     <Container showHelpBook >
       <Center pos={'relative'} height={'100%'} flexDir={'column'} zIndex={2} >
-        <Stack width={'85%'} height={'auto'}  bg={'app.bglightGray'} rounded={8}  padding={8} >
+        <Stack width={`${(ContainerWidth * 100)}%`} height={'auto'}  bg={'app.bglightGray'} rounded={8}  padding={8} >
           <Stack p={3} m={8} >
             <Text fontSize={useBreakpoint({ base: 16, md: 17, lg: 22, xl: 44 })} fontWeight={500} >Can you figure out the definition of setting from the following examples?</Text>
             <Text fontSize={useBreakpoint({ base: 16, md: 17, lg: 22, xl: 44 })} fontWeight={'lighter'} color={'GrayText'}  >(take a minute to think about this)</Text>

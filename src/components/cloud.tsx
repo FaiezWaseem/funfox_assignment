@@ -1,3 +1,4 @@
+import { useBreakpoint } from "@/hook/useDimensions";
 import { Stack, Text } from "@chakra-ui/react";
 
 interface CloudProps {
@@ -5,6 +6,7 @@ interface CloudProps {
 }
 
 export default function Cloud( { label } : CloudProps) {
+     const widthAndHeight =  useBreakpoint({ base : 200 , md : 200 , lg : 200 , xl : 300});
     return <Stack
         bgImage={'url(/cloud.svg)'}
         backgroundSize={'contain'}
@@ -12,8 +14,8 @@ export default function Cloud( { label } : CloudProps) {
         bgPosition={'center'}
         width={'auto'}
         height={'auto'}
-        minW={200}
-        minH={100}
+        minW={widthAndHeight}
+        minH={widthAndHeight}
         justify={'center'}
         align={'center'}
     >

@@ -9,11 +9,14 @@ import { useDimesions, useBreakpoint } from "@/hook/useDimensions";
 
 export default function Home() {
   const [, , isMobile, isTablet] = useDimesions();
+  const kidIconwidthandHeight = useBreakpoint({ base: 80, md: 80, lg: 80, xl: 120 });
+
+  const ContainerWidth = useBreakpoint({ base: 0.80, md: 0.90, lg: 0.85, xl: 0.75 });
 
   return (
     <Container showHelpBook={false} >
       <Center pos={'relative'} height={'100%'} flexDir={'column'} zIndex={2} >
-        <Stack width={'85%'}  height={'auto'} bg={'app.bglightGray'} rounded={8} padding={8} >
+        <Stack width={`${(ContainerWidth * 100)}%`}  height={'auto'} bg={'app.bglightGray'} rounded={8} padding={8} >
           <Center>
             <HStack bg={'#FE6784'} justify={'center'} border={'3px dashed #FFAEBE'} py={5}
               px={10} my={5} rounded={10} width={{
@@ -39,9 +42,10 @@ export default function Home() {
             </Text>
             <Image
               src={'/kid.svg'}
-              width={80}
-              height={60}
+              width={kidIconwidthandHeight}
+              height={kidIconwidthandHeight}
               alt="Kid Image"
+              loading="lazy"
             />
           </HStack>
           <HStack justify={'space-evenly'} flexWrap={'wrap'} >
